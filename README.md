@@ -3,6 +3,14 @@ import time
 import numpy as np
 import requests
 
+def send_message(message):
+    url = "https://api.telegram.org/botTON_TOKEN/sendMessage"
+
+    requests.post(url, data={
+        "chat_id": "TON_CHAT_ID",
+        "text": message
+    })
+
 TOKEN = "TON(job)TOKEN = "TON_TOKEN"
 
 while True:
